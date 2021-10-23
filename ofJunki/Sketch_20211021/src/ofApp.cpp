@@ -21,7 +21,8 @@ void ofApp::setup() {
 
   ofSetFrameRate(30);
   ofSetWindowTitle("openFrameworks");
-  ofBackground(239);
+  // ofBackground(239);
+  ofBackgroundHex(0xFFFFE4);
   ofSetColor(39);
   ofSetBackgroundAuto(false);
 
@@ -48,7 +49,13 @@ void ofApp::draw() {
     ofRotate(ofMap(ofNoise(ofRandom(1000), ofGetFrameNum() * 0.05), 0, 1, -360,
                    360));
 
-    ofSetColor(39);
+    if (i % 2 == 0) {
+      ofSetColor(39);
+    } else {
+      // red
+      // ofSetHexColor(0xF10C45);
+      ofSetHexColor(0xCF0134);
+    }
     ofFill();
     ofBeginShape();
     for (auto deg = 0; deg < 360; deg += 1) {
@@ -56,7 +63,8 @@ void ofApp::draw() {
     }
     ofEndShape(true);
 
-    ofSetColor(239);
+    // ofSetColor(239);
+    ofSetHexColor(0xFFFFE4);
     ofNoFill();
     ofBeginShape();
     for (auto deg = 0; deg < 360; deg += 1) {
