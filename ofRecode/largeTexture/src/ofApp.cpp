@@ -4,11 +4,12 @@
 void ofApp::setup() {
   // assume our target is 8.5x11 -> we can calculate the w/h of
   // the largest texture at that aspect ratio
-  // or 8.3x11.7 -> a4
-  // or 11.7x16.5 -> a3
+  // or 8.3x11.7  -> a4 -> 210x297mm
+  // or 11.7x16.5 -> a3 -> 297x420mm
 
   int value;
   glGetIntegerv(GL_MAX_TEXTURE_SIZE, &value);
+  // std::cout << "max texture sie: " << value << std::endl;
   float total = 11.7 + 8.3;
   w = (8.3 / total) * (value - 1);
   h = (11.7 / total) * (value - 1);
