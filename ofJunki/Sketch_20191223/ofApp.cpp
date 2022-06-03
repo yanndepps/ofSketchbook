@@ -1,5 +1,5 @@
 /*
-** © Junkiyoshi
+** © JunKiyoshi
 ** Recoded
 */
 
