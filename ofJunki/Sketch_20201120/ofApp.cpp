@@ -11,7 +11,9 @@ void ofApp::setup()
   ofSetFrameRate(60);
   ofSetWindowTitle("openframeworks");
 
-  ofBackground(239);
+  // ofBackground(239);
+  // ofBackgroundHex(0xf6f6f4); // chromotome -> spatial01
+  ofBackgroundHex(0xfff8e7); // chromotome -> rohlfs_1R
   ofSetLineWidth(2);
   ofSetCircleResolution(30);
 
@@ -19,7 +21,9 @@ void ofApp::setup()
   ofEnableAntiAliasing();
 
   ofColor color;
-  vector<int> hex_list = {0xef476f, 0xffd166, 0x06d6a0, 0x118ab2, 0x073b4c};
+  // vector<int> hex_list = {0xef476f, 0xffd166, 0x06d6a0, 0x118ab2, 0x073b4c}; // original colors
+  // vector<int> hex_list = {0xff5937, 0xf6f6f4, 0x4169ff}; // chromotome -> spatial01
+  vector<int> hex_list = {0x004996, 0x567bae, 0xff4c48, 0xffbcb3}; // chromotome -> rohlfs_1R
   for (auto hex : hex_list) {
     color.setHex(hex);
     this->base_color_list.push_back(color);
@@ -45,7 +49,9 @@ void ofApp::setup()
 }
 
 //--------------------------------------------------------------
-void ofApp::update() {}
+void ofApp::update()
+{
+}
 
 //--------------------------------------------------------------
 void ofApp::draw()
@@ -95,7 +101,10 @@ void ofApp::draw()
     ofEndShape(true);
 
     ofNoFill();
-    ofSetColor(39);
+    // ofSetColor(39);
+    // ofSetColor(239);
+    // ofSetHexColor(0xff5937); // chromotome -> spatial01
+    ofSetHexColor(0x004996); // chromotome -> rohlfs_1R
     ofDrawCircle(glm::vec2(), 43);
 
     ofPopMatrix();
@@ -110,10 +119,10 @@ void ofApp::draw()
     ofSaveImage(pix, fileName + "_" + ofToString(ofGetFrameNum()) + ".png", OF_IMAGE_QUALITY_BEST);
   }
   // ---
-  if (ofGetFrameNum() == 360) {
-    ofLog() << "done rendering !";
-    ofExit();
-  }
+  // if (ofGetFrameNum() == 360) {
+  //   ofLog() << "done rendering !";
+  //   ofExit();
+  // }
 }
 
 //--------------------------------------------------------------
