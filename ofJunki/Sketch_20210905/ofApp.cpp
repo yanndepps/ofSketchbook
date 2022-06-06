@@ -9,7 +9,7 @@
 void ofApp::setup()
 {
   ofSetFrameRate(60);
-  ofSetWindowTitle("openframeworks");
+  ofSetWindowTitle("twin color ribbon & sphere");
 
   ofBackground(239);
   ofNoFill();
@@ -158,13 +158,13 @@ void ofApp::draw()
   // ---
   this->cam.begin();
 
-  // ofDrawCircle(glm::vec3(), 81);
+  ofDrawCircle(glm::vec3(), 81);
 
   ofRotateX(ofGetFrameNum() * 0.37);
   ofRotateY(ofGetFrameNum() * 0.72);
 
   this->face.draw();
-  // this->line.drawWireframe();
+  this->line.drawWireframe();
   this->sphere_face.draw();
   // this->sphere_line.drawWireframe();
 
@@ -179,10 +179,10 @@ void ofApp::draw()
     ofSaveImage(pix, fileName + "_" + ofToString(ofGetFrameNum()) + ".png", OF_IMAGE_QUALITY_BEST);
   }
 
-  // if (ofGetFrameNum() == 360) {
-  //   ofLog() << "done rendering !";
-  //   ofExit();
-  // }
+  if (ofGetFrameNum() == 360) {
+    ofLog() << "done rendering !";
+    ofExit();
+  }
 }
 
 //--------------------------------------------------------------

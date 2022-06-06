@@ -12,7 +12,7 @@ void ofApp::setup()
   this->cam.setDistance(500);
 
   scale = 1.0;
-  save = true;
+  save = false;
   fileName = "./output/waveheart";
 
   width = scale * ofGetWidth();
@@ -25,7 +25,7 @@ void ofApp::setup()
 
   // ---
   ofSetFrameRate(30);
-  ofSetWindowTitle("openFrameworks");
+  ofSetWindowTitle("wavering heart");
   ofEnableDepthTest();
 
   this->frame.setMode(ofPrimitiveMode::OF_PRIMITIVE_LINES);

@@ -1,5 +1,5 @@
 /*
-** © JunKiyoshi
+** © Junkiyoshi
 ** Recoded
 */
 
@@ -9,7 +9,7 @@
 void ofApp::setup()
 {
   ofSetFrameRate(60);
-  ofSetWindowTitle("openframeworks");
+  ofSetWindowTitle("line of noise");
 
   // white over black
   // ofBackgroundHex(0x000000);

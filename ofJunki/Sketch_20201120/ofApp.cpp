@@ -9,7 +9,7 @@
 void ofApp::setup()
 {
   ofSetFrameRate(60);
-  ofSetWindowTitle("openframeworks");
+  ofSetWindowTitle("increase & decrease");
 
   // ofBackground(239);
   // ofBackgroundHex(0xf6f6f4); // chromotome -> spatial01
@@ -119,10 +119,10 @@ void ofApp::draw()
     ofSaveImage(pix, fileName + "_" + ofToString(ofGetFrameNum()) + ".png", OF_IMAGE_QUALITY_BEST);
   }
   // ---
-  // if (ofGetFrameNum() == 360) {
-  //   ofLog() << "done rendering !";
-  //   ofExit();
-  // }
+  if (ofGetFrameNum() == 360) {
+    ofLog() << "done rendering !";
+    ofExit();
+  }
 }
 
 //--------------------------------------------------------------

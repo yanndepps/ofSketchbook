@@ -9,7 +9,7 @@
 void ofApp::setup()
 {
   ofSetFrameRate(30);
-  ofSetWindowTitle("openframeworks");
+  ofSetWindowTitle("invisible sphere");
   // ofBackgroundHex(0xFFFFFF); // Black over White
   // ofBackgroundHex(0x000000); // White over Black
   // ofBackgroundHex(0x1C2D1D); // Pigment_01
