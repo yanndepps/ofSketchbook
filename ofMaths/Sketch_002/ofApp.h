@@ -11,13 +11,4 @@ public:
   void draw();
 
   void keyPressed(int key);
-
-  ofEasyCam cam;
-  ofMesh face, frame;
-
-  ofFbo fbo;
-  float scale;
-  float width, height;
-  bool save;
-  string fileName;
 };

@@ -22,11 +22,5 @@ public:
   void dragEvent(ofDragInfo dragInfo);
   void gotMessage(ofMessage msg);
 
-  ofMesh mesh;
-
-  ofFbo fbo;
-  float scale;
-  float width, height;
-  bool save;
-  string fileName;
+  ofPolyline myLine;
 };

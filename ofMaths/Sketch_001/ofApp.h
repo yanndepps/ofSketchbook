@@ -10,10 +10,7 @@ public:
   void update();
   void draw();
 
-  ofFbo fbo;
-  float scale;
-  float width, height;
-  glm::vec2 centre;
-  bool save;
-  string fileName;
+  ofPolyline myLine;
+  int minInc;
+  int maxInc;
 };
