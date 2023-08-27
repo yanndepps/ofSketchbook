@@ -1,8 +1,7 @@
 // Coding Maths
 // © BIT-101
-// Sketch_002 -> Intro to Trigonometry
-// Sin & Cos
-// Recoded 2023.07.29
+// Sketch_003 -> More Trigonometry
+// Recoded 2023.08.27
 
 #include "ofApp.h"
 
@@ -13,25 +12,34 @@ void ofApp::setup()
   ofSetWindowTitle("openFrameworks");
   ofBackground(239);
   ofSetColor(0);
+  //---
+  speed = 0.1; // 0.1
+  angle = 0;
+  //---
 }
 
 //--------------------------------------------------------------
 void ofApp::update()
 {
+  centerY = ofGetHeight() * 0.5;
+  centerX = ofGetWidth() * 0.5;
+  offset = ofGetHeight() * 0.2; // 0.4
+  //---
+  // cout << "offset value -> " << offset << endl;
+}
+
+//--------------------------------------------------------------
+void ofApp::render()
+{
+  float y = centerY + sin(angle) * offset;
+  ofDrawCircle(centerX, y, 50);
+  angle += speed;
 }
 
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-  ofTranslate(0, ofGetHeight() * 0.5);
-  ofScale(1, -1);
-
-  for (float angle = 0; angle < PI * 2; angle += 0.01) {
-    // cout << sin(angle);
-    int x = angle * 200;
-    int y = sin(angle) * 200;
-    ofDrawRectangle(x, y, 5, 5);
-  }
+  render();
 }
 
 //--------------------------------------------------------------
